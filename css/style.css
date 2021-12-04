@@ -163,12 +163,24 @@ html {
 
 body {
   font-family: 'Raleway', sans-serif;
-  background: url(../images/bg-mobile.png) no-repeat, #0c122c;
+  background: #0c122c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
 }
 
 .main {
+  background: url(../images/bg-mobile.png) no-repeat;
   max-width: 37.5rem;
-  padding: 12.7rem 2.4rem 0;
+  width: 100%;
+  padding: 12.7rem 2.4rem 16rem;
 }
 
 .card-actions {
@@ -184,6 +196,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 17.6rem;
   margin-top: 3.3rem;
 }
@@ -202,7 +217,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 10px;
-  margin-right: 1.6rem;
 }
 
 .card-remaining {
@@ -317,5 +331,59 @@ body {
   font-size: 1.2rem;
   line-height: 1.4rem;
   margin-left: 0.9rem;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main {
+    background: url(../images/bg-desktop.png) bottom no-repeat;
+    max-width: 1440px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 100vh;
+    padding: 0;
+  }
+  .card-actions {
+    width: 35rem;
+    margin-right: 3rem;
+  }
+  .card-remaining {
+    width: 54rem;
+  }
+  .card-remaining__left {
+    bottom: auto;
+    -webkit-transform: none;
+            transform: none;
+    left: auto;
+    right: 32px;
+    top: -50px;
+  }
+  #triangle-topright {
+    width: 0;
+    height: 0;
+    border-top: 50px solid white;
+    border-left: 50px solid transparent;
+    position: absolute;
+    top: 43px;
+    right: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
