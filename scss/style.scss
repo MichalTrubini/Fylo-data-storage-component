@@ -57,10 +57,31 @@ body {
     &__bar-container {
         width: 100%;
         height: 2rem;
-        background: #0C122C;
-        opacity: 0.5;
+        background: hsla(229, 57%, 11%,0.5);
         border-radius: 10px;
         margin-bottom: 1rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    &__bar-full {
+        width: 75%;
+        height: 14px;
+        background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+        border-radius: 8px;
+        margin-left: 3px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__bar-circle {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background: white;
+        margin-right: 3px;
     }
 
     &__legend {
